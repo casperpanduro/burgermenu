@@ -25,14 +25,12 @@
         // magic
         $(window).resize(function(){
             mobilemenu();
-            console.log(".franklyburger--menu--created " +$this['selector']);
         });
         mobilemenu();
 
         function mobilemenu() {
             $this.css('display','block');
             wWidth = $(window).width();
-            console.log(wWidth);
             if(wWidth < settings.breakpoint) {
                 $('.franklyburger').show();
                 $("body").addClass("franklyburger--created");
@@ -45,7 +43,7 @@
         }
 
         function createoverlaymenu() {
-            console.log();
+            
             
         }
 
