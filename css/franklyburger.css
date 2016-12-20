@@ -1,0 +1,114 @@
+
+div.franklyburger {
+	width: 30px;
+	height: 30px;
+	right: 20px;
+	/*	*/
+	position: absolute;
+	top: 50%;
+	z-index: 9999;
+	cursor: pointer;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+div.franklyburger span {
+	height: 3px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	width: 100%;
+	-webkit-transition: .2s .1s ease;
+	transition: .2s .1s ease;
+}
+
+div.franklyburger span:before {
+	content: '';
+	height: 3px;
+	background: inherit;
+	position: absolute;
+	top: -9px;
+	width: 100%;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+div.franklyburger span:after {
+	content: '';
+	height: 3px;
+	background: inherit;
+	position: absolute;
+	top: 9px;
+	width: 100%;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.franklyburger--activated div.franklyburger span {
+	height: 0px;
+	-webkit-transition: 0s ease;
+	transition: 0s ease;
+}
+
+.franklyburger--activated div.franklyburger span:before, .franklyburger--activated div.franklyburger span:after {
+	top: 0px;
+}
+
+.franklyburger--activated div.franklyburger span:before {
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.franklyburger--activated div.franklyburger span:after {
+	-webkit-transform: rotate(135deg);
+	    -ms-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+
+.franklyburger--created #site-navigation {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 9999;
+	background: #fff;
+	padding: 100px 20px;
+	visibility: hidden;
+	opacity: 0;
+	display: none;
+}
+
+.franklyburger--created #site-navigation ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.franklyburger--created #site-navigation ul li {
+	display: block;
+	margin: 5px 0px;
+	position: relative;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+	opacity: 0;
+	-webkit-transform: translateY(100px);
+	    -ms-transform: translateY(100px);
+	        transform: translateY(100px);
+}
+
+.franklyburger--created #site-navigation ul li.frankly-menu-item-show {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	    -ms-transform: translateY(0px);
+	        transform: translateY(0px);
+}
+
+.franklyburger--created.franklyburger--activated #site-navigation {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: visibility 0s ease, opacity .3s ease;
+	transition: visibility 0s ease, opacity .3s ease;
+}

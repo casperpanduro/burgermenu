@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Burgermenu</title>
+	<link rel="stylesheet" type="text/css" href="css/franklyburger.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/franklyburger.js"></script>
+
+</head>
+<body>
+	<header class="site-header">
+		<nav id="site-navigation">
+			<ul>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">References</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<script>
+		$(document).ready(function(){
+			console.log("hello");
+			$("#site-navigation").franklyburger({
+				breakpoint: 767,
+	            speed: 300,
+	            header: 'header',
+			});
+		});
+	</script>
+</body>
+</html>
