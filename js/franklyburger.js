@@ -18,7 +18,7 @@
         // Styles
         $(settings.header).append('<div class="franklyburger"><span></span></div>');
 
-        if($(settings.header).css('position','static')) {
+        if($(settings.header).css('position') == 'static') {
             $(settings.header).css('position','relative');
         }
 
